@@ -1,0 +1,87 @@
+body{
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    min-height: 100vh;
+    background-image: url('./assets/purple.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:white;
+    padding:50px;
+    flex-direction: column;
+    
+}
+/* Full-screen blurred background image */
+.anotherblur {
+    background: #f98450;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .glass-card {
+    width: 80%;
+    max-width: 400px;
+    height: 300px;
+    padding: 100px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 
+      0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06),
+      inset 0 0 80px rgba(255, 255, 255, 0.1);
+  }
+  .glass-card p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  /* Additional layer for depth */
+  .glass-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    padding: 2px;
+    background: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.1)
+    );
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask: 
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+input{
+    padding:10px;
+    border-radius: 10px;
+    border-style: 1px;
+
+
+}
+
+#input-field{
+    display: flex;
+}
