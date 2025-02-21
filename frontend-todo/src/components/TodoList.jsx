@@ -1,19 +1,20 @@
 import React from 'react'
+import TodoItem from './TodoItem';
 
-const TodoList = () => {
+const TodoList = ({list, isChecked, onDelete}) => {
+  console.log(list);
+  const renderedList = list.map((listItem, index)=>{
+    return(
+      <li key={index}>
+        <TodoItem item={listItem} isChecked={isChecked} deleted={()=> onDelete(listItem.name)} />
+      </li>
+    )
+  });
+ 
+
   return (
-    <div className="glass-card">
-        <h3>To-Do List</h3>
-        <div class= "container">
-            <input type="text" id="tasks" placeholder="Add tasks..."/>
-            <button className="submit">Add</button>
-        </div>
-        <div className="list">
-            <input type="checkbox" class="checkbox"/>
-            <p className='color'>Hello</p>
-            <i className="fa fa-trash-o color"></i>
-        </div>
-        
+   < div>
+       <ul className='list'>{renderedList}</ul> 
       
     </div>
   )
