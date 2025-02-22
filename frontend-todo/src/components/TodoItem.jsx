@@ -11,14 +11,22 @@ const TodoItem = ({item, isChecked, deleted}) => {
     console.log(`${name} was deleted`)
   }
   return (
-    <div>
-            <label className='item color' onClick={()=>handleClick(item.name)}>
-              <input type="checkbox"/>
-              {item.name}
-              <i className="fa fa-trash-o color" onClick={handleDelete}></i>
-            </label>
+    <>
+      <label className='item color' onClick={()=>handleClick(item.name)}>
+        <input type="checkbox"/>
+        {item.name}
+        <i 
+      className="fa fa-trash-o color" 
+      onClick={(e) => {
+      e.stopPropagation();
+      handleDelete(item.name);
+      }}>
+    </i>
+ 
+    </label>
             
-    </div>
+            
+    </>
   )
 }
 

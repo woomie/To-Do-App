@@ -13,10 +13,10 @@ const TodoList = ({list, isChecked, onDelete}) => {
  
 
   return (
-   < div>
+   <>
        <ul className='list'>{renderedList}</ul> 
       
-    </div>
+    </>
   )
 }
 

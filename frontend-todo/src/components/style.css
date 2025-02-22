@@ -9,9 +9,15 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Orbitron', sans-serif; 
 }
 .color{
     color:white;
+}
+.font{
+    font-family: 'Orbitron', sans-serif; /* Sci-fi and geometric */
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .glass-card{
@@ -19,71 +25,66 @@ body{
     align-items: center;
     flex-direction: column;
     width: 80%;
-    max-width: 300px;
-    height:300px;
+    max-width: 500px;
+    min-height:300px;
     padding:30px;
     background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(20px);
     border-radius: 24px;
-    border: 0000.5px solid rgba(255, 255, 255, 0.3);  
+    border: 0.8px solid rgba(255, 255, 255, 0.5);  
     
+}
+.container{
+    display:flex;
+   column-gap: 5px;
 }
 #tasks{
     padding:10px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    background-color: rgba(255, 255, 255, 1);
-    opacity:0.5;
-    border-style: none; 
-    color:#bcc5e4;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #fff;
+    backdrop-filter: blur(10px);              
+}
+input::placeholder {
+    color:rgba(255, 255, 255, 0.7);
+}
+input:focus {
+    background-color: rgb(120, 111, 111) !important;
+    border: none
 }
 .submit{
     padding:10px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-radius: 10px;
     background-color: #c981cd;
     border-style: none;
     color: white;
+    box-shadow: inset 0 0 10px #a656a9;
 }
-.checkbox{
-    border-radius: 50%;
+
+.list{
+    list-style: none;
+    margin: 0;
+    padding:0;
+    width:100%;
 }
-.item{
-    position: relative;
+.list li{
+    width:100%;
+    margin: 0;
+    padding:0;
+}
+.item {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    margin-top: 20px;
     align-items: center;
-    padding:10px;
-    padding-left: 30px;
-    padding-right: 30px;
-    border-bottom:1px solid rgba(255, 255, 255, 1); 
-    transition: border-bottom 0.3 ease; 
-}
-.item::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 1px;
-    background: rgba(255, 255, 255, 1);
-    width: 0;
-    transition: width 0.3s ease;
+    width: 80%;
+    margin-top: 20px;
+    padding: 10px 20px;  /* Simplified padding */
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+    transition: border-bottom 0.3s ease;
 }
 .item:has(input[type="checkbox"]:checked) {
     text-decoration: line-through;
     border-bottom: none;
-  }
-  ul {
-    list-style: none;      /* Remove default bullet points */
-    margin: 0 auto;        /* Auto margins center block-level elements */
-    padding:0;
-    padding-left: 30px;
-    padding-right: 30px;
-    background-color: #bcc5e4;
-    display: flex;
-    align-items: center;
-    
-  }
+}
 
