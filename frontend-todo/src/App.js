@@ -1,6 +1,4 @@
-import logo from './logo.svg';
 import '../src/components/style.css';
-import TodoList from './components/TodoList';
 import AddTodo from './components/AddTodo';
 
 
