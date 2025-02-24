@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import TodoList from './TodoList';
+import Toggle from './Toggle';
 
 const AddTodo = () => {
   //start with an empty input then onchange use settodoitem to change input
@@ -98,8 +99,10 @@ const AddTodo = () => {
     }
       // Filter out the deleted item
   }
+  
   return (
     <div className='glass-card'>
+      <Toggle/>
       <h2 className='font color'>To-do List</h2>
        <div className= "container">
             <input type="text" id="tasks" placeholder="Add tasks..." value={todoItem.name||""} onChange={handleSetTodoItem}/>
