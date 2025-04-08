@@ -14,7 +14,7 @@ const AddTodo = () => {
   //function to get the data
   async function fetchTodoList(){
     try{
-      const response = await fetch (`${process.env.REACT_APP_API_URL}/todos`);
+      const response = await fetch (`${process.env.REACT_APP_API_URL}/`);
       console.log("response status", response.status);
       if(response.ok){
         const jsonResponse = await response.json();
