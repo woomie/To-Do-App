@@ -10,12 +10,12 @@ A simple full stack todo app built with react(front end) and node/express(backen
 
 # Installation
 git clone https://github.com/woomie/To-Do-App.git
-cd TO-DO-APP
+- cd TO-DO-APP
 
-cd frontend-todo
-npm install
-npm start
+* cd frontend-todo 
+- npm install
+- npm start
 
-cd backend-todo
-npm install
-nodemon index.js
+* cd backend-todo
+- npm install
+- nodemon index.js
