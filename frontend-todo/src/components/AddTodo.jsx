@@ -36,7 +36,7 @@ const AddTodo = () => {
   async function handleSetListItem(){
     //const newTask = {text: todoItem.name, done: todoItem.done};
     try{
-      const response = await fetch("http://localhost:5000/", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -55,7 +55,7 @@ const AddTodo = () => {
   async function isChecked(id){
     const updatedDoneStatus = !listItem.find(item => item.id === id).done;
     try{
-      const response = await fetch(`http://localhost:5000/${id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -82,7 +82,7 @@ const AddTodo = () => {
   async function handleDeleteItem(id) {
     try{
       
-      const response = await fetch(`http://localhost:5000/${id}`,{
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/${id}`,{
         method:"DELETE",
       });
 
